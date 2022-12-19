@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    /* font-family: motserrat; */
+    font-family: 'Tangerine', serif;
+    line-height: 1.2;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to top right,#80cbc4,#e1bee7,#80ddea,#d1c4e9);
+}
+label.logo{
+    font-size: 36px;
+    font-weight: bold;
+    color:rgb(255, 246, 246);
+    padding: 0 100px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px ;
+}
+nav ul  li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav ul li a{    
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border:  1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    border: 1px solid white;
+    transition: .5s;
+    background: linear-gradient(to top right,#80cbc4,#e1bee7,#80ddea,#d1c4e9);
+}
+
+/* buymaney */
+.buymaney{
+  height: 40px;
+  width: 100px;
+  background: rgb(247, 248, 247);
+  border-radius: 20%;
+  margin-left: 10px;
+  float:left; 
+}
+.row .buymaney p{
+  text-align:center;
+  font-size: 25px;
+  color: red;
+}
+.checkbtn{
+    font-size: 30px;
+    color: azure;
+     line-height: 80px;
+    float: right;
+    margin-trim: 40px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+@media(max-width:953px){
+    label.logo{
+        font-size: 30px;
+        padding: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:959px){
+.checkbtn{
+    display: block;
+}
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(177, 169, 169);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+}
+nav ul li{
+    display: block;
+    margin:50px 0;
+    line-height:30px
+}
+nav ul li a {
+    font-size: 20px;
+}
+a:hover,a:actice{
+    background: none;
+    color: black;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+}
+section{
+    /* background: url(images/shopback.jpg) no-repeat;
+    background-size: cover;
+    height: calc(70vh);
+    overflow: scroll; */
+    width: 100%;
+    height: 500px;
+    background-image: url(shop.jpg);
+    background-size: 100% 100%;
+}
+
+/* body */
+.column {
+    float: left;
+    width: 24%;
+    height: 200px;
+    margin: 0.5%;
+  }
+  
+  .column img{
+    margin: 5px;
+    height: 150px;
+    width: 100px;
+    float: right;
+
+  }
+.column h2{
+    font-family:Khmer OS Muol;
+    text-align: center;
+}
+  .column p{
+    font-size: 17px;
+    color: rgb(253, 255, 249);
+    text-align: left;
+    margin: 5px;
+    text-align: justify;
+    overflow:hidden;
+
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media (max-width: 1300px) {
+    .column {
+      width: 48%;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  /* #topnav {
+    width: 100%;
+    height: 200px;
+    background: #b0a7a172;
+  } */
+
+  /* icon */
+  /* .icon{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align:left;
+  }
+  .btn{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: #80cbc4;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #80ddea;
+    color: rgb(242, 0, 153);
+    overflow: hidden;
+    position: relative;
+  }
+  .btn i{
+    line-height: 80px;
+    font-size: 40px;
+    transition: 0.2s linear;
+
+  }
+  btn:hover{
+    transform: scale(1.3);
+    color: red;
+  } */
+  /* icon */
+  .topnav {
+    height: auto;
+    overflow: hidden;
+    background-color: #333;
+  }
+   
+  .btn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #80cbc4;
+    margin: 10px;
+    border-radius: 1px;
+    box-shadow: 0 5px 15px -5px #80ddea;
+    color: rgb(242, 0, 153);
+    overflow: hidden;
+    position: relative;
+  }
+  .btn i{
+    line-height: 50px;
+    font-size: 40px;
+    transition: 0.2s linear;
+  }
+  btn:hover{
+    transform: scale(1.3);
+    color: rgb(241, 241, 241);
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a {
+      float: none;
+      width: 50%;
+      height: auto;
+      width: 40px;
+    }
+    .btn i{
+        line-height: 40px;
+        font-size: 40px;
+        transition: 0.2s linear;
+      }
+  }
+
+  /* Bottom */
+/* 
+  body {
+    font-family: 'Tangerine', serif;
+    line-height: 1.2;
+  }
+
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.container{
+    max-width: 1170px;
+    background-color: rgb(156, 154, 154);
+    margin: auto;
+}
+ div{
+    list-style: none;
+} 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col{
+     width: 25%;
+     padding: 0 15px;
+}
+.footer{
+    background-color: rgb(65, 60, 62);
+    padding: 30px;
+}
+.footer-col h4{
+    font-size: 20px;
+    color: rgb(164, 164, 164);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: ralative;
+    background:linear-gradient(to top right,#80cbc4,#e1bee7,#80ddea,#d1c4e9);
+}
+.footer-col div ul:not(:last-chils){
+    margin-bottom: 10px;
+}
+.footer-col div li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col div li a:hover{
+    color: chartreuse;
+    padding-left: 10px;
+}
+.footer-col .social-link a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgb(239, 239, 239);
+    transition: all 0.3s ease;
+}
+.footer-col .social-link a:hover{
+    color: aliceblue;
+    background-color: chartreuse;
+}
+/* responsive */
+ @media (max-width: 900px) {
+    .footer-col{
+        width:50% ;
+        margin-bottom: 30px;
+    }
+    
+} 
+ @media (max-width: 650px) {
+    .footer-col{
+        width:100% ;
+        margin-bottom: 30px;
+    }
+    
+} 
